@@ -30,7 +30,7 @@
     --pale-blue: hsl(221, 100%, 96%);
     --light-lanvender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
-    --fade-dark-gray-blue: hsla(224, 30%, 27%,.5);
+    --fade-dark-gray-blue: hsla(224, 30%, 27%, .5);
 
     /*--------------------------*/
     /*-------- Gradiant --------*/
@@ -45,7 +45,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* transition: all 100ms; */
 }
 
 html {
@@ -57,7 +56,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* padding: 5rem auto; */
     font-size: 1.4rem;
     text-decoration: none;
     justify-content: center;
@@ -65,12 +63,11 @@ body {
 
 .card {
     width: 60rem;
-    /* height: 300px; */
     box-shadow: 0 3px 8px 0 rgba(70, 70, 70, .2);
     border-radius: 2.5rem;
     display: grid;
     overflow: hidden;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
 
 }
@@ -93,9 +90,6 @@ body {
 }
 
 .card_result-body {
-    /* border: 1px #000 solid; */
-    /* min-height: 12rem;
-    min-width: 12rem; */
     height: 15rem;
     width: 15rem;
     border-radius: 100%;
@@ -103,7 +97,6 @@ body {
     place-items: center;
     padding: 3rem;
     background: var(--circle-gradient);
-    /* background-color: #000; */
 }
 
 .card_result-body h1 {
@@ -125,7 +118,7 @@ body {
     font-weight: 500;
 }
 
-.card_summary{
+.card_summary {
     height: 100%;
     padding: 3rem;
     display: flex;
@@ -157,12 +150,15 @@ body {
     color: var(--fade-dark-gray-blue);
     border-radius: .7rem;
 }
-.card_sumary-body h3{
+
+.card_sumary-body h3 {
     flex-grow: 1;
     color: var(--light-red);
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-.card_sumary-body p span{
+.card_sumary-body p span {
     color: var(--dark-gray-blue);
 }
 
@@ -182,6 +178,7 @@ body {
 
 .card_summary-button:active {
     background: var(--background-gradient);
+    transition: all 1s ease-out;
 }
 
 .card_summary-button:active {
@@ -189,26 +186,32 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    body{
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
         margin: 0;
         padding: 0;
         display: block;
     }
-    .card{
-        /* display: none; */
+
+    .card {
         grid-template-columns: 1fr;
-        /* grid-template-rows: repeat(2,1fr); */
         width: 100%;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
 
-    .card_result{
+    .card_result {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
 
-    .card_summary{
+    .card_summary {
         gap: 3rem;
     }
 }
