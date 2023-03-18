@@ -14,6 +14,7 @@ jsonData.forEach(x => {
     header.innerText = x.category
     header.style.color = x.color
     img.src = x.icon
+    img.alt = "icon"
     paragraph.innerHTML =`<span>${x.score}</span> / 100`
 
     summary.append(img);
